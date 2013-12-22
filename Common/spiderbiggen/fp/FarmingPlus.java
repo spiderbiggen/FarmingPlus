@@ -8,6 +8,7 @@ import spiderbiggen.fp.lib.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -18,8 +19,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class FarmingPlus {
     
-    @Instance(Reference.MOD_ID)
+    @Instance(value = Reference.MOD_ID)
     public static FarmingPlus instance;
+    
+    @SidedProxy(clientSide="spiderbiggen.fp.client.ClientProxy", serverSide="spiderbiggen.fp.CommonProxy")
+    public static CommonProxy proxy;
     
     public static CreativeTabs tabFP = new CreativeTabFP("tabFP");
     
@@ -30,7 +34,7 @@ public class FarmingPlus {
     
     @EventHandler
     public void Init(FMLInitializationEvent event) {
-        
+        proxy.registerRenderers();
     }
     
     @EventHandler
