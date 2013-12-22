@@ -1,0 +1,16 @@
+[
+{
+  "modid": "FP",
+  "name": "Farming Plus",
+  "description": "Additional foods to help you out of your hungry needs.",
+  "version": "0.1.5",
+  "url": "github.com/spiderbiggen/FarmingPlus",
+  "updateUrl": "",
+  "authorList": ["Spiderbiggen"],
+  "credits": "By Spiderbiggen",
+  "logoFile": "",
+  "screenshots": [  ],
+  "parent":"",
+  "dependencies": [  ]
+}
+]
