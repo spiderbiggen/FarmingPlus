@@ -12,17 +12,15 @@ public class ItemFoodFP extends ItemFood {
         super(id, healAmount, isWolfsFav);
     }
     
-    public ItemFoodFP(int id, int healAmount, float saturationmodifier,
-            boolean isWolfsFav) {
+    public ItemFoodFP(int id, int healAmount, float saturationmodifier, boolean isWolfsFav) {
         super(id, healAmount, saturationmodifier, isWolfsFav);
-        this.setCreativeTab(FarmingPlus.tabFP);
+        setCreativeTab(FarmingPlus.tabFP);
     }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(this.getUnlocalizedName()
-                .substring(this.getUnlocalizedName().indexOf(".") + 1));
+        this.itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
     
 }

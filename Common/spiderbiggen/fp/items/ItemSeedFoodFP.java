@@ -14,7 +14,6 @@ public class ItemSeedFoodFP extends ItemSeedFood {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(this.getUnlocalizedName()
-                .substring(this.getUnlocalizedName().indexOf(".") + 1));
+        this.itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 }

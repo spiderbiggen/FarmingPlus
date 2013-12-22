@@ -11,8 +11,8 @@ public class ItemSoupFP extends ItemFoodFP {
         super(id, healAmount, isWolfsFav);
     }
     
-    public ItemStack onEaten(ItemStack par1ItemStack, World par2World,
-            EntityPlayer par3EntityPlayer) {
+    @Override
+    public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
         super.onEaten(par1ItemStack, par2World, par3EntityPlayer);
         return new ItemStack(Item.bowlEmpty);
     }

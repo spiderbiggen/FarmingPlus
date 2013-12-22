@@ -1,6 +1,7 @@
 package spiderbiggen.fp;
 
 import net.minecraft.creativetab.CreativeTabs;
+import spiderbiggen.fp.items.FPItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -10,9 +11,10 @@ public class CreativeTabFP extends CreativeTabs {
         super(par2Str);
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex() {
-        return 0;
+        return FPItems.tomato.itemID;
     }
     
     @Override

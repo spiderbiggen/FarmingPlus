@@ -19,10 +19,12 @@ public class TomatoCrop extends BlockCrops {
     /**
      * Generate a crop produce ItemStack for this crop.
      */
+    @Override
     protected int getCropItem() {
         return FPItems.tomato.itemID;
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
@@ -34,18 +36,18 @@ public class TomatoCrop extends BlockCrops {
             }
             
             return this.iconArray[par2 >> 1];
-        } else {
-            return this.iconArray[3];
-        }
+        } else return this.iconArray[3];
     }
     
     /**
      * Generate a seed ItemStack for this crop.
      */
+    @Override
     protected int getSeedItem() {
         return FPItems.tomato.itemID;
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
     /**
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
@@ -55,8 +57,7 @@ public class TomatoCrop extends BlockCrops {
         this.iconArray = new Icon[4];
         
         for (int i = 0; i < this.iconArray.length; ++i) {
-            this.iconArray[i] = par1IconRegister
-                    .registerIcon(Reference.RESOURCE_PREFIX + "tomatoes_" + i);
+            this.iconArray[i] = par1IconRegister.registerIcon(Reference.RESOURCE_PREFIX + "tomatoes_" + i);
         }
     }
 }

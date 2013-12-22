@@ -12,8 +12,6 @@ public class FPBlocks {
     public static Block trap;
     
     public static void InitBlocks() {
-        tomatoCrop = new TomatoCrop(IDs.TOMATOCROPID)
-                .setUnlocalizedName(Reference.RESOURCE_PREFIX + "tomatoCrop")
-                .setHardness(0.0F).setStepSound(Block.soundGrassFootstep);
+        tomatoCrop = new TomatoCrop(IDs.TOMATOCROPID).setUnlocalizedName(Reference.RESOURCE_PREFIX + "tomatoCrop").setHardness(0.0F).setStepSound(Block.soundGrassFootstep);
     }
 }
